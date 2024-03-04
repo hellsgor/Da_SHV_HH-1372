@@ -8,6 +8,33 @@
   padding-right: $content-block-padding-right;
   padding-bottom: $content-block-padding-bottom;
   padding-left: $content-block-padding-left;
+  
+  ol,
+  ul {
+    li {
+      padding-left: 13px;
+      position: relative;
+      list-style-type: none;
+    }
+  }
+  
+  ul li::before {
+    position: absolute;
+    top: 8px;
+    left: 3px;
+    display: block;
+    width: 3px;
+    height: 3px;
+    border-radius: 50%;
+    background-color: $black;
+    content: '';
+  }
+  
+  ol li::before {
+    content: counter(list-item) '.';
+    position: absolute;
+    left: 3px;
+  }
 }
 
 @media (max-width: #{$mediaMD}) {

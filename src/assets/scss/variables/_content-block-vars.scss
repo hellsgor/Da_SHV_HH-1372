@@ -1,27 +1,31 @@
 @import '@/assets/scss/variables/colors';
 
+@function getHeadingsIndent($headingIndentAccordingLayout) {
+  @return $headingIndentAccordingLayout - $text-indent-top
+}
+
 // content-block
 // desktop
-$content-block-padding-top: 24px;
-$content-block-padding-right: 24px;
-$content-block-padding-bottom: 24px;
-$content-block-padding-left: 24px;
+$content-block-padding-top: 50px;
+$content-block-padding-right: 31px;
+$content-block-padding-bottom: 20px;
+$content-block-padding-left: 30px;
 // mobile
-$content-block-padding-top-mobile: 24px;
-$content-block-padding-right-mobile: 24px;
-$content-block-padding-bottom-mobile: 24px;
-$content-block-padding-left-mobile: 24px;
+$content-block-padding-top-mobile: 40px;
+$content-block-padding-right-mobile: 16px;
+$content-block-padding-bottom-mobile: 40px;
+$content-block-padding-left-mobile: 16px;
 
 // font properties
 $text-color: $black;
 // desktop
-$text-indent-top: 16px;
+$text-indent-top: 12px;
 $text-font-size: 16px;
 $text-line-height: 1.4;
 $text-font-weight: 400;
 // mobile
-$text-indent-top-mobile: 16px;
-$text-font-size-mobile: 12px;
+$text-indent-top-mobile: 12px;
+$text-font-size-mobile: 16px;
 
 // headings
 $headings-color: $black;
@@ -29,9 +33,9 @@ $headings-color: $black;
 $headings-font-size: 20px;
 $headings-font-weight: 700;
 $headings-line-height: 1.2;
-$heading-top-indent: 14px;
-$heading-bottom-indent: 14px;
+$heading-top-indent: getHeadingsIndent(36px); // передать сюда отступ заголовков из макета
+$heading-bottom-indent: 12px;
 // mobile
-$headings-font-size-mobile: 18px;
-$heading-top-indent-mobile: 14px;
-$heading-bottom-indent-mobile: 14px;
+$headings-font-size-mobile: 20px;
+$heading-top-indent-mobile: 36px;
+$heading-bottom-indent-mobile: 12px;
