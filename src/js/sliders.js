@@ -1,4 +1,5 @@
-import Swiper, { Autoplay, EffectCreative, Pagination } from 'swiper'
+import Swiper from 'swiper'
+import {Autoplay, Navigation, Pagination} from "swiper/modules";
 
 class InitSlider {
   classSlider = ''
@@ -55,69 +56,24 @@ class InitSlider {
 
 const listSliders = [
   {
-    classSlider: '.tmpl-hh-header__ticker',
+    classSlider: '.tmpl-hh-header__slider',
     settingsSlider: {
-      modules: [Autoplay],
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-      },
-      loop: true,
-      speed: 12000,
-      allowTouchMove: false,
-      spaceBetween: 20,
-      centeredSlides: true,
-      slidesPerView: 'auto',
-      breakpoints: {
-        699: {
-          autoplay: false
-        }
-      }
-    }
-  },
-  {
-    classSlider: ".tmpl-hh-footer__slider-desktop",
-    settingsSlider: {
-      modules: [Autoplay, EffectCreative],
-      parallax: true,
-      centeredSlides: true,
-      loop: true,
-      slideToClickedSlide: true,
-      spaceBetween: 4,
-      grabCursor: true,
-      slidesPerView: 1.92,
+      modules: [Autoplay, Navigation, Pagination],
       autoplay: {
         delay: 4000,
-        disableOnInteraction: false,
       },
-      effect: "creative",
-      creativeEffect: {
-        limitProgress: 2,
-        prev: {
-          scale: 0.775,
-          translate: ["-91%", 0, 0],
-        },
-        next: {
-          scale: 0.775,
-          translate: ["91%", 0, 0],
-        },
+      loop: true,
+      centeredSlides: true,
+      slidesPerView: 'auto',
+      initialSlide: 0,
+      navigation: {
+        prevEl: '.slider-button_prev',
+        nextEl: '.slider-button_next',
       },
-      breakpoints: {
-        700: {
-          slidesPerView: 1.8,
-          spaceBetween: 8,
-          creativeEffect: {
-            limitProgress: 2,
-            prev: {
-              scale: 0.775,
-              translate: ["-91%", 0, 0],
-            },
-            next: {
-              scale: 0.775,
-              translate: ["91%", 0, 0],
-            },
-          },
-        }
+      pagination: {
+        el: '.tmpl-hh-header__slider-pagination',
+        bulletClass: 'tmpl-hh-header__slider-bullet',
+        bulletActiveClass: 'tmpl-hh-header__slider-bullet_active',
       }
     },
   },

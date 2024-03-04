@@ -1,0 +1,35 @@
+@import '@/assets/scss/variables/media';
+@import '@/assets/scss/variables/colors';
+
+$root: '.slider-button';
+
+#{$root} {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  background-color: $light-gray;
+  cursor: pointer;
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+  
+  &_rotate {
+    transform: rotate(180deg);
+  }
+}
+
+@media (max-width: #{$mediaMD}) {
+  #{$root} {
+  }
+}
+
+@media (max-width: #{$mediaSM}) {
+  #{$root} {
+  }
+}
