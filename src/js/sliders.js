@@ -15,6 +15,8 @@ class InitSlider {
     if (this.settingsSlider.destroySize) {
       this.checkResizeSlider()
     }
+
+
   }
 
   checkSlider() {
@@ -42,6 +44,8 @@ class InitSlider {
 
   initSlider() {
     this.slider = new Swiper(this.classSlider, this.settingsSlider) || null
+    this.sliderElem = document.querySelector(this.classSlider);
+    this.playVideo();
   }
 
   destroySlider() {
@@ -52,6 +56,16 @@ class InitSlider {
     })
     document.querySelector(`${this.classSlider}__wrapper`)?.removeAttribute('style')
   }
+
+  playVideo() {
+    const videoInSlides = this.sliderElem.querySelectorAll('[data-with-video] video');
+    this.slider.on('slideChange', () => {
+      videoInSlides.forEach((video) => {
+        video.currentTime = 0;
+        video.play();
+      })
+    })
+  }
 }
 
 const listSliders = [
@@ -60,7 +74,7 @@ const listSliders = [
     settingsSlider: {
       modules: [Autoplay, Navigation, Pagination],
       autoplay: {
-        delay: 4000,
+        delay: 15000,
       },
       loop: true,
       centeredSlides: true,
