@@ -3,16 +3,16 @@
     <div class="tmpl-hh-header__slider-wrapper swiper-wrapper">
       <div class="tmpl-hh-header__slider-slide swiper-slide" data-with-video="true">
         <video
-          muted
+          muted=""
           playsinline=""
         >
-          <source src="/assets/images/one-day.mp4" type="video/mp4"/>
+          <source src="https://hhcdn.ru/file/17732226.mp4" type="video/mp4"/>
           Твой браузер не поддерживает тег video
         </video>
       </div>
       {{#each this.headerSliderPhotos.blue}}
         <div class="tmpl-hh-header__slider-slide swiper-slide">
-          <img src="{{this}}" alt="slide">
+          <img src="{{this}}" alt="slide"/>
         </div>
       {{/each}}
     </div>

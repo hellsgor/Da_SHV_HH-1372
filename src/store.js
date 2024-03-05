@@ -1,10 +1,10 @@
 export const store = {
   headerSliderPhotos: {
     blue: [
-      '/assets/images/blue_slide_2.jpg',
-      '/assets/images/blue_slide_3.jpg',
-      '/assets/images/blue_slide_4.jpg',
-      '/assets/images/blue_slide_5.jpg',
+      'https://hhcdn.ru/ichameleon/345236.jpg',
+      'https://hhcdn.ru/ichameleon/345237.jpg',
+      'https://hhcdn.ru/ichameleon/345238.jpg',
+      'https://hhcdn.ru/ichameleon/345239.jpg',
     ],
     green: [],
   },
