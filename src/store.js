@@ -7,11 +7,11 @@ export const store = {
       '/assets/images/blue_slide_5.jpg',
     ],
     green: [
-      '/assets/images/green_slide_1.jpg',
-      '/assets/images/green_slide_2.jpg',
-      '/assets/images/green_slide_3.jpg',
-      '/assets/images/green_slide_4.jpg',
-      '/assets/images/green_slide_5.jpg',
+      'https://hhcdn.ru/ichameleon/345240.jpg',
+      'https://hhcdn.ru/ichameleon/345244.jpg',
+      'https://hhcdn.ru/ichameleon/345241.jpg',
+      'https://hhcdn.ru/ichameleon/345243.jpg',
+      'https://hhcdn.ru/ichameleon/345242.jpg',
     ],
   },
 
