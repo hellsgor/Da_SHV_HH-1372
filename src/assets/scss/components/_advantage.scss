@@ -15,6 +15,11 @@ $root: '.advantage';
   height: fit-content;
   margin-right: $indent;
   
+  &_two-in-line {
+    $indents: 1;
+    width: calc((100% - ($indent * $indents)) / ($indents + 1));
+  }
+  
   &__icon {
     width: 130px;
     height: 130px;
@@ -32,6 +37,10 @@ $root: '.advantage';
       flex-shrink: 0;
       flex-grow: 0;
       flex-basis: 74px;
+      
+      path.with-fill {
+        fill: $accent !important;
+      }
     }
   }
   
